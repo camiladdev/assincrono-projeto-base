@@ -13,8 +13,8 @@ function lerConteudoDoArquivo (arquivo) {
         leitor.onload = () => {
             resolve({ url: leitor.result, nome: arquivo.name })
         }
-
         leitor.onerror = () => {
+
             reject(`Erro na leitura do arquivo ${arquivo.name}`)
         }
 
