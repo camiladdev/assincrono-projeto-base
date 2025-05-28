@@ -61,3 +61,13 @@ listaTags.addEventListener("click", (evento) => {
         listaTags.removeChild(tagQueQueremosRemover);
     }
 })
+
+const tagsDisponiveis = ["Front-end", "Programação", "Data Science", "Full-stack", "Back-end", "Análise de Dados", "Power BI", "Inteligência Artificial", "HTML", "CSS", "JavaScript", "Java", "Python", "Tailwind", "C#", "C++"];
+
+async function verificaTagsDisponiveis (tagTexto) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(tagsDisponiveis.includes(tagTexto));
+        }, 1000)
+    })
+}
